@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { filterOptions } from "../../constants/filterOptions";
 import Dropdown from "../Dropdown";
 import InputComponent from "../InputComponent";
+import "./jobFilters.css";
 
 const JobFilters = () => {
   const [filterState, setFilterState] = useState({});
@@ -44,7 +45,7 @@ const JobFilters = () => {
         <InputComponent
           onChange={handleOnInputFilter("location")}
           className={"w-100 h-100 location-filter"}
-          placeholder={"location"}
+          placeholder={"Search Location"}
         />
       </div>
     </div>
