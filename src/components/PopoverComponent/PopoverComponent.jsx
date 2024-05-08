@@ -1,7 +1,7 @@
 import React from "react";
 import { Popover } from "@mui/material";
 import ButtonComp from "../Button/ButtonComp";
-
+import "./popoverComponent.css";
 const PopoverComponent = ({
   handleOnClick,
   handleOnClose,

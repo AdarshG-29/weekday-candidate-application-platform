@@ -1,5 +1,7 @@
 import React from "react";
 import JobCard from "../Card/JobCard";
+import "./cardContainer.css";
+
 const CardContainer = ({ jobList }) => {
   return (
     <div>

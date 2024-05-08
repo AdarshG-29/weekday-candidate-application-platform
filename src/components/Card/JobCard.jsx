@@ -5,6 +5,8 @@ import ChipComp from "../Chip/ChipComp";
 import CardHeader from "./CardHeader";
 import CardBody from "./CardBody";
 import CardFooter from "./CardFooter";
+import "./card.css";
+
 const JobCard = ({
   jobLink,
   jobDesc,

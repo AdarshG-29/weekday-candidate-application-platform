@@ -8,7 +8,7 @@ const Header = ({ jobRole, location, companyName, logoUrl }) => {
       <CardHeader
         className={"card-header d-flex align-items-start"}
         title={
-          <div className="">
+          <div className="info-container">
             <h3>{companyName}</h3>
             <h2>{jobRole}</h2>
             <p>{location}</p>
