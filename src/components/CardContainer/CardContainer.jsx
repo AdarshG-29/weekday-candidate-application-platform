@@ -1,8 +1,9 @@
 import React from "react";
 import JobCard from "../Card/JobCard";
 import "./cardContainer.css";
+import Loader from "../Loader";
 
-const CardContainer = ({ jobList }) => {
+const CardContainer = ({ jobList, loading, loaderRef }) => {
   return (
     <div>
       <div className="w-100 d-flex flex-wrap justify-content-start card-container">
@@ -26,6 +27,9 @@ const CardContainer = ({ jobList }) => {
             />
           );
         })}
+      </div>
+      <div ref={loaderRef} className="d-flex justify-content-center loader p-1">
+        {loading && <Loader />}
       </div>
     </div>
   );
