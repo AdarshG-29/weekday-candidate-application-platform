@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { filterOptions } from "../../constants/filterOptions";
 import Dropdown from "../Dropdown";
 import InputComponent from "../InputComponent";
 import "./jobFilters.css";
+import { useDispatch } from "react-redux";
+import { setFilters } from "../../redux/jobApplication.action";
 
 const JobFilters = () => {
+  const dispatch = useDispatch();
   const [filterState, setFilterState] = useState({});
+
+  useEffect(() => {
+    dispatch(setFilters(filterState));
+  }, [filterState, dispatch]);
 
   const handleOnSelectFilter = (filterLabel) => (event, value) => {
     const newFilterState = { ...filterState, [filterLabel]: value };

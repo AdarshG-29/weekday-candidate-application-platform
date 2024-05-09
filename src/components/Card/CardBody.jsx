@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CardContent from "@mui/material/CardContent";
 import TickIcon from "../../assets/Icons/TickIcon";
-import { validSalary, currencyIcon } from "../../utils/helpers.utils";
+import { validSalary, currencyIcon } from "../../utils/helper.utils";
 import PopoverComponent from "../PopoverComponent/PopoverComponent";
 
 const CardBody = ({ maxSalary, minSalary, currencyCode, jobDesc }) => {
