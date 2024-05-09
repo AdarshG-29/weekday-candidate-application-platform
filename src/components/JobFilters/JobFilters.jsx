@@ -10,14 +10,17 @@ const JobFilters = () => {
   const dispatch = useDispatch();
   const [filterState, setFilterState] = useState({});
 
+  //dispatch an action to store the selected filters into redux
   useEffect(() => {
     dispatch(setFilters(filterState));
   }, [filterState, dispatch]);
 
+  //set dropdown values into dropdownField filters.
   const handleOnSelectFilter = (filterLabel) => (event, value) => {
     const newFilterState = { ...filterState, [filterLabel]: value };
     setFilterState(newFilterState);
   };
+  //setting input value as onchange filter
   const handleOnInputFilter = (filterLabel) => (event) => {
     const newFilterState = {
       ...filterState,

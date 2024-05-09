@@ -6,8 +6,8 @@ const PopoverComponent = ({
   handleOnClick,
   handleOnClose,
   textDesc,
-  anchorEl,
   id,
+  isOpen,
 }) => {
   return (
     <div>
@@ -18,9 +18,18 @@ const PopoverComponent = ({
         <div>
           <Popover
             id={id}
-            open={Boolean(anchorEl)}
-            anchorEl={anchorEl}
+            open={isOpen}
             onClose={handleOnClose}
+            className={`popover-box`}
+            anchorReference="none"
+            anchorOrigin={{
+              vertical: "center",
+              horizontal: "center",
+            }}
+            transformOrigin={{
+              vertical: "center",
+              horizontal: "center",
+            }}
           >
             <p>{textDesc}</p>
           </Popover>

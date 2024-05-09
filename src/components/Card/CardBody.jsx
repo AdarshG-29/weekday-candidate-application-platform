@@ -5,18 +5,16 @@ import { validSalary, currencyIcon } from "../../utils/helper.utils";
 import PopoverComponent from "../PopoverComponent/PopoverComponent";
 
 const CardBody = ({ maxSalary, minSalary, currencyCode, jobDesc }) => {
-  const [anchorEl, setAnchorEl] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleOnClick = (event) => {
-    setAnchorEl(event.currentTarget);
+    setIsOpen(true);
   };
 
-  const handleOnClose = () => {
-    setAnchorEl(null);
+  const handleOnClose = (event, reason) => {
+    setIsOpen(false);
   };
-
-  const open = Boolean(anchorEl);
-  const id = open ? "simple-popover" : undefined;
+  const id = isOpen ? "simple-popover" : undefined;
   return (
     <div className="p-0 m-0">
       <CardContent className="card-body">
@@ -38,7 +36,7 @@ const CardBody = ({ maxSalary, minSalary, currencyCode, jobDesc }) => {
             <PopoverComponent
               id={id}
               textDesc={jobDesc}
-              anchorEl={anchorEl}
+              isOpen={isOpen}
               handleOnClick={handleOnClick}
               handleOnClose={handleOnClose}
             />
