@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CardContent from "@mui/material/CardContent";
-import TickIcon from "../../assets/TickIcon";
+import TickIcon from "../../assets/Icons/TickIcon";
 import { validSalary, currencyIcon } from "../../utils/helpers.utils";
 import PopoverComponent from "../PopoverComponent/PopoverComponent";
 

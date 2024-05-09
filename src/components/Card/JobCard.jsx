@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "@mui/material/Card";
-import HourGlass from "../../assets/HourGlass";
+import HourGlass from "../../assets/Icons/HourGlass";
 import ChipComp from "../Chip/ChipComp";
 import CardHeader from "./CardHeader";
 import CardBody from "./CardBody";
@@ -23,7 +23,10 @@ const JobCard = ({
   postDate,
 }) => {
   return (
-    <Card className="d-flex flex-column p-1 card justify-content-between">
+    <Card
+      key={jobId}
+      className="d-flex flex-column p-1 card justify-content-between"
+    >
       <ChipComp
         postDate={postDate}
         icon={<HourGlass />}
